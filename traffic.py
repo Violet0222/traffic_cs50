@@ -60,7 +60,7 @@ def load_data(data_dir):
     """
     X, Y = [], []
     for i in range(NUM_CATEGORIES):
-        q = os.path.join(p, str(i))
+        q = os.path.join(data_dir, str(i))
         for f in os.listdir(q):
             fp = os.path.join(q, f)
             image = cv2.resize(cv2.imread(fp), (IMG_WIDTH, IMG_HEIGHT))
